@@ -10,7 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', ['as'=>'home','uses'=>'IndexController@getIndex']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/news', ['as'=>'news','uses'=>'IndexController@getNews']);
+
+Route::get('/about', ['as'=>'about','uses'=>'IndexController@getAbout']);
